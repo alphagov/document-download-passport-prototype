@@ -1,0 +1,7 @@
+---
+applications:
+- name: passports
+  command: npm start
+  memory: 256M
+  buildpacks:
+  - nodejs_buildpack

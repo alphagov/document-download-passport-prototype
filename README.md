@@ -12,3 +12,13 @@ npm install
 ```
 npm start
 ```
+
+## Deploy
+
+This should be deployed in the `prototypes` space using:
+
+```
+cf push
+```
+
+We have already set environment variables in the PaaS for `PASSWORD` and `NOTIFYAPIKEY`
