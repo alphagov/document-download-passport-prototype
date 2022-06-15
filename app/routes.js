@@ -18,7 +18,7 @@ router.post('/email-address', function (req, res) {
     // `emailAddress` here needs to match the name of the form field in
     // your HTML page
     req.body.emailAddress
-  );
+  ).catch(err => console.error(err));
 
   // This is the URL the users will be redirected to once the email
   // has been sent
