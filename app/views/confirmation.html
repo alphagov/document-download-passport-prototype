@@ -10,11 +10,38 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
-        Your application has been sent
+        Your appointment is booked
       </h1>
-      <p>
-        You will receive an email...
+      <p class="govuk-body">
+        Your appointment is on {{ data['appointment-time'] }} at your local passport office.
       </p>
+
+      <h2 class="govuk-heading-m">
+        Download and complete your application form
+      </h2>
+      <p class="govuk-body">
+        You should receive an email with a link to download your passport application form.
+      </p>
+      <p class="govuk-body">
+        Please print it, fill it in and bring it to your appointment.
+      </p>
+      <p class="govuk-body">
+        What to bring to your appointment
+      </p>
+      <p class="govuk-body">
+        You will need:
+      </p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          your completed application form
+        </li>
+        <li>
+          2 identical printed passport photos
+        </li>
+        <li>
+          your supporting documents (read the information on the application form to find out what you need)
+        </li>
+      </ul>
 
     </div>
   </div>

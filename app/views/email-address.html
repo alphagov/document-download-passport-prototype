@@ -19,9 +19,12 @@
 
         {{ govukInput({
           label: {
-            text: "What is your email address?",
+            text: "Enter your email address",
             classes: "govuk-label--l",
             isPageHeading: true
+          },
+          hint: {
+            text: 'We’ll email you an application form to fill in and bring to your appointment'
           },
           id: "email-address",
           name: "emailAddress",
