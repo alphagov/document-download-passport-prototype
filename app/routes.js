@@ -26,4 +26,10 @@ router.post('/email-address', function (req, res) {
 
 });
 
+router.post('/choose-time', function (req, res) {
+
+  res.redirect('/email-address');
+
+});
+
 module.exports = router
