@@ -28,7 +28,6 @@ router.post('/email-address', function (req, res) {
 
 router.post('/choose-time', function (req, res) {
 
-  console.log(req.body)
   res.redirect('/email-address');
 
 });

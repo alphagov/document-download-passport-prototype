@@ -1,0 +1,60 @@
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form method="post">
+        {{ govukRadios({
+          idPrefix: "appointment-time",
+          name: "appointment-time",
+          fieldset: {
+            legend: {
+              text: "Choose an appointment time",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "The appointment will last up to 30 minutes"
+          },
+          items: [
+            {
+              text: "Monday 4 July 2022 at 10am",
+              value: "Monday 4 July 2022 at 10am"
+            },
+            {
+              text: "Tuesday 5 July 2022 at 3pm",
+              value: "Tuesday 5 July 2022 at 3pm"
+            },
+            {
+              text: "Wednesday 6 July 2022 at 2pm",
+              value: "Wednesday 6 July 2022 at 2pm"
+            },
+            {
+              text: "Friday 8 July 2022 at 9am",
+              value: "Friday 8 July 2022 at 9am"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
