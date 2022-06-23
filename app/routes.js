@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const axios = require('axios')
 
 var NotifyClient = require('notifications-node-client').NotifyClient,
     notify = new NotifyClient(process.env.NOTIFYAPIKEY);
@@ -19,6 +20,18 @@ router.post('/email-address', function (req, res) {
     // your HTML page
     req.body.emailAddress
   ).catch(err => console.error(err));
+
+  axios
+    .post('https://documents.cloudapps.digital/allow-email', {
+      'email-address': req.body.emailAddress
+    })
+    .then(res => {
+      console.log(`statusCode: ${res.status}`);
+      console.log(res);
+    })
+    .catch(error => {
+      console.error(error);
+    });
 
   // This is the URL the users will be redirected to once the email
   // has been sent
