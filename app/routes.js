@@ -18,7 +18,12 @@ router.post('/email-address', function (req, res) {
     '058ad366-fc4a-47cf-b4aa-f7c8cde40e63',
     // `emailAddress` here needs to match the name of the form field in
     // your HTML page
-    req.body.emailAddress
+    req.body.emailAddress,
+    {
+      personalisation: {
+        appointmentTime: req.session.data['appointment-time']
+      }
+    }
   ).catch(err => console.error(err));
 
   axios
