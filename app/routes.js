@@ -30,9 +30,8 @@ router.post('/email-address', function (req, res) {
     .post('https://documents.cloudapps.digital/allow-email', {
       'email-address': req.body.emailAddress
     })
-    .then(res => {
-      console.log(`statusCode: ${res.status}`);
-      console.log(res);
+    .then(response => {
+      console.log('HTTP', response.status, response.config.url);
     })
     .catch(error => {
       console.error(error);
