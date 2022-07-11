@@ -28,7 +28,8 @@ router.post('/email-address', function (req, res) {
 
   axios
     .post('https://documents.cloudapps.digital/allow-email', {
-      'email-address': req.body.emailAddress
+      'email-address': req.body.emailAddress,
+      'domain': 'passports.cloudapps.digital'
     })
     .then(response => {
       console.log('HTTP', response.status, response.config.url);
